@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #9CAF88; /* sage-green */
+  --color-primary-50: #F7F9F5;
+  --color-primary-100: #EEF3E9;
+  --color-primary-200: #DCE6D2;
+  --color-primary-300: #C9D9BB;
+  --color-primary-400: #B6CCA4;
+  --color-primary-500: #9CAF88; /* sage-green */
+  --color-primary-600: #7D8C6F;
+  --color-primary-700: #5E6956;
+  --color-primary-800: #3F463D;
+  --color-primary-900: #202324;
+
+  /* Secondary Colors */
+  --color-secondary: #36454F; /* charcoal */
+  --color-secondary-50: #F2F3F4;
+  --color-secondary-100: #E5E7E9;
+  --color-secondary-200: #CBCFD3;
+  --color-secondary-300: #B1B7BD;
+  --color-secondary-400: #979FA7;
+  --color-secondary-500: #7D8791;
+  --color-secondary-600: #64707B;
+  --color-secondary-700: #4A5865;
+  --color-secondary-800: #36454F; /* charcoal */
+  --color-secondary-900: #1B2328;
+
+  /* Accent Colors */
+  --color-accent: #E8B86D; /* warm-gold */
+  --color-accent-50: #FDF9F3;
+  --color-accent-100: #FBF3E7;
+  --color-accent-200: #F7E7CF;
+  --color-accent-300: #F3DBB7;
+  --color-accent-400: #EFCF9F;
+  --color-accent-500: #E8B86D; /* warm-gold */
+  --color-accent-600: #BA9357;
+  --color-accent-700: #8B6E41;
+  --color-accent-800: #5C492B;
+  --color-accent-900: #2E2416;
+
+  /* Background Colors */
+  --color-background: #FFFFFF; /* white */
+  --color-surface: #F5F5DC; /* beige */
+
+  /* Text Colors */
+  --color-text-primary: #2D3748; /* gray-800 */
+  --color-text-secondary: #718096; /* gray-500 */
+
+  /* Status Colors */
+  --color-success: #48BB78; /* green-400 */
+  --color-success-50: #F0FDF4;
+  --color-success-100: #DCFCE7;
+  --color-success-200: #BBF7D0;
+  --color-success-300: #86EFAC;
+  --color-success-400: #48BB78; /* green-400 */
+  --color-success-500: #22C55E;
+  --color-success-600: #16A34A;
+  --color-success-700: #15803D;
+  --color-success-800: #166534;
+  --color-success-900: #14532D;
+
+  --color-warning: #ED8936; /* orange-400 */
+  --color-warning-50: #FFFBEB;
+  --color-warning-100: #FEF3C7;
+  --color-warning-200: #FDE68A;
+  --color-warning-300: #FCD34D;
+  --color-warning-400: #ED8936; /* orange-400 */
+  --color-warning-500: #F59E0B;
+  --color-warning-600: #D97706;
+  --color-warning-700: #B45309;
+  --color-warning-800: #92400E;
+  --color-warning-900: #78350F;
+
+  --color-error: #F56565; /* red-400 */
+  --color-error-50: #FEF2F2;
+  --color-error-100: #FEE2E2;
+  --color-error-200: #FECACA;
+  --color-error-300: #FCA5A5;
+  --color-error-400: #F56565; /* red-400 */
+  --color-error-500: #EF4444;
+  --color-error-600: #DC2626;
+  --color-error-700: #B91C1C;
+  --color-error-800: #991B1B;
+  --color-error-900: #7F1D1D;
+
+  /* Border Colors */
+  --color-border: #E2E8F0; /* gray-200 */
+  --color-border-active: #9CAF88; /* sage-green */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+  }
+
+  .font-headline {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white font-poppins font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-250 ease-in-out hover:bg-primary-600;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white font-poppins font-semibold px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-250 ease-in-out hover:bg-secondary-700;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-200 p-6;
+  }
+
+  .form-input {
+    @apply border border-gray-200 rounded-lg px-4 py-3 focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-20 transition-all duration-200 ease-in-out;
+  }
+
+  .section-surface {
+    @apply bg-surface;
+  }
+}
+
+@layer utilities {
+  .shadow-cta {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .shadow-card {
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .transition-micro {
+    transition: all 200ms ease-in-out;
+  }
+
+  .transition-standard {
+    transition: all 250ms ease-in-out;
+  }
+}
